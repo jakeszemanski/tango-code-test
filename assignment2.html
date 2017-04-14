@@ -1,0 +1,34 @@
+<script>
+  var rect1 = {
+    x: 20, y: 30, width: 40, height: 11
+  };
+
+  var rect2 = {
+    x: 50, y: 22, width: 26, height: 36
+  };
+
+  var rect4 = {
+    x: 10, y: 10, width: 30, height: 20
+  };
+
+  var rect5 = {
+    x: 45, y: 10, width: 12, height: 4
+  };
+
+
+  function overlap(rectangle1, rectangle2) {
+    var rect1X1 = rectangle1.x;
+    var rect1Y1 = rectangle1.y;
+    var rect1X2 = rectangle1.x + rectangle1.width;
+    var rect1Y2 = rectangle1.y + rectangle1.height;
+  
+    var rect2X1 = rectangle2.x;
+    var rect2Y1 = rectangle2.y;
+    var rect2X2 = rectangle2.x + rectangle2.width;
+    var rect2Y2 = rectangle2.y + rectangle2.height;
+
+    return rect2X1 > rect1X2 || rect2Y1 > rect1Y2 || rect1X1 > rect2X2 || rect1Y1 > rect2Y2;
+  }
+  
+
+</script>

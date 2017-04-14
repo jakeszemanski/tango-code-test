@@ -1,0 +1,29 @@
+<script>
+function assignment3(str) {
+  var h = 7;
+  var letters = ["a","c","d","e","g","i","l","m","n","o","p",
+    "r","s","t","u","w"];
+    // MAX IS 15
+  for (var i = 0; i < str.length; i++) {
+    var letter = str[i];
+    var index = letters.indexOf(letter);
+    h = (h * 37) + index;
+  }
+  return h;
+}
+
+// Reverses the equation and runs until the 7 numbers are found. Those numbers can then be matched to the index of the letters array to find the word
+function answer(int) {
+  while (int !== 7) {
+    for (var i = 0; i < 7; i++) {
+      var index = Math.floor(Math.random() * 16);
+      console.log(index);
+      int = (int / 37) - index;
+    }
+  }
+}
+// console.log(assignment3('swcwmnc'))
+console.log(answer(667734139064));
+</script>
+
+667734139064 

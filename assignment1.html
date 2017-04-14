@@ -1,0 +1,26 @@
+<script>
+// Solution 1: Assign max and min numbers to the first one in the array then loop through entire array checking the rest of the numbers against the max and mins
+var numberArray = [1, 5, 10, 2, 7];
+var max = numberArray[0];
+var min = numberArray[0];
+var arrayLength = numberArray.length;
+
+for (var i = 0; i < arrayLength; i++) {
+  if (numberArray[i] > max) {
+    max = numberArray[i];
+  }
+  if (numberArray[i] < min) {
+    min = numberArray[i];
+  }
+}
+var difference = max - min;
+console.log(difference);
+
+// Solution 2: grab max and min from array using the Math object. I prefer this method because it is cleaner and easier to read
+var max2 = Math.max.apply( Math, numberArray);
+var min2 = Math.min.apply( Math, numberArray);
+var difference2 = max2 - min2;
+console.log(difference2);
+
+console.log(numberArray.max);
+</script>
