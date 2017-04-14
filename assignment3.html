@@ -12,7 +12,9 @@ function assignment3(str) {
   return h;
 }
 
-// Reverses the equation and runs until the 7 numbers are found. Those numbers can then be matched to the index of the letters array to find the word
+// I reversed the equation and had it run until the 7 numbers are found. Those numbers can then be matched to the index of the letters array to find the word. This doesn't work and runs forever. I have it set to run until int is equal to 7, because that is what 'h' begins at in the original equation. It will return numbers within the range of the array index, but it can't seem to find the word
+
+
 function answer(int) {
   while (int !== 7) {
     for (var i = 0; i < 7; i++) {
@@ -22,8 +24,10 @@ function answer(int) {
     }
   }
 }
-// console.log(assignment3('swcwmnc'))
+
+
 console.log(answer(667734139064));
+
 </script>
 
-667734139064 
+

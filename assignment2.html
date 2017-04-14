@@ -15,6 +15,8 @@
     x: 45, y: 10, width: 12, height: 4
   };
 
+// Source: http://stackoverflow.com/questions/23302698/java-check-if-two-rectangles-overlap-at-any-point
+// Following the second example I added the width to the x axis and height to the y axis to determine where the opposite diagonal point of the rectange was. I then used false gates to catch any true statement and return the opposite. This code could be dried up a bit, but I like how this clearly sets up each square and then does the checks
 
   function overlap(rectangle1, rectangle2) {
     var rect1X1 = rectangle1.x;
@@ -27,7 +29,12 @@
     var rect2X2 = rectangle2.x + rectangle2.width;
     var rect2Y2 = rectangle2.y + rectangle2.height;
 
-    return rect2X1 > rect1X2 || rect2Y1 > rect1Y2 || rect1X1 > rect2X2 || rect1Y1 > rect2Y2;
+    var overlapping = rect2X1 > rect1X2 || rect2Y1 > rect1Y2 || rect1X1 > rect2X2 || rect1Y1 > rect2Y2;
+    if (overlapping === true) {
+      return false;
+    }  else {
+      return true;
+    }
   }
   
 
